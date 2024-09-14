@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "EmailServiceGrpc";
+
+package EmailServiceGrpc;
+
+service EmailServiceGrpc {
+	/*
+	Errors:
+		InvalidArgument - Empty or incorrect one of required fields
+	*/
+	rpc SendEmail (SendEmailRequest) returns (SendEmailResponse);
+}
+
+message SendEmailRequest {
+	string recipient = 1;
+	string body = 2;
+	string subject = 3;
+}
+
+message SendEmailResponse {
+	bool success = 1;
+}
