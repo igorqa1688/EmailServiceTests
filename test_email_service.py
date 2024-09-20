@@ -242,7 +242,7 @@ def test_send_without_all_data() -> None:
 
 @pytest.mark.negative
 def test_send_email_without_symbol() -> None:
-    recipient = "igorqanous.dev"
+    recipient = "igorqanos.dev"
     subject = generate_random_string(15)
     body = generate_random_string(150)
     result = send_email(recipient, subject, body)
