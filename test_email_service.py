@@ -40,7 +40,6 @@ def test_send_email_subject_two_dots() -> None:
     body = generate_random_string(150)
 
     response = send_email(recipient, subject, body)
-    print(response)
     assert response.success == True
 
 
